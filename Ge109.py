@@ -33,12 +33,12 @@ def datan(n):               #degree-based atan function
 """
 ~~~~~~~~~~~2D VECTOR ANALYSIS TOOLS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 """
-def 2d_magdir(Rx, Ry):      #convert vector notation to scalar notation
+def magdir_2d(Rx, Ry):      #convert vector notation to scalar notation
     mag = math.sqrt(Rx ** 2 + Ry ** 2)
     direc = math.atan(Ry / Rx) * 180 / math.pi
     return [mag, direc]
 
-def 2d_components(mag, direc): #convert scalar notation to vector notation
+def components_2d(mag, direc): #convert scalar notation to vector notation
     Rx = mag * dcos(direc)
     Ry = mag * dsin(direc)
     return [Rx, Ry]
@@ -47,7 +47,10 @@ def law_of_cosines(a, b, theta): #Apply the Law of Cosines
     c = math.sqrt(a ** 2 + b ** 2 - 2 * a * b * dcos(theta))
     return c
 
-def law_of_sines():         #Apply the Law of Sines [IN DEVELOPMENT]
+def LOS_a():         #Apply the Law of Sines [IN DEVELOPMENT]
+    return 0
+
+def LOS_theta():
     return 0
 
 """
